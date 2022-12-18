@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import Customers from './pages/Customers/Customers';
 import EditCustomer from './pages/EditCustomer/EditCustomer';
 import EditProduct from './pages/EditProduct/EditProduct';
@@ -8,7 +8,7 @@ import Purchases from './pages/Purchases/Purchases';
 
 export default function RoutesSwitch() {
   return (
-    <Router>
+    <HashRouter>
       <Menu />
       <Routes>
         <Route path="/" element={<Products />} />
@@ -18,6 +18,6 @@ export default function RoutesSwitch() {
         <Route path="/customers/:customerId" element={<EditCustomer />} />
         <Route path="/purchases" element={<Purchases />} />
       </Routes>
-    </Router>
+    </HashRouter>
   );
 }

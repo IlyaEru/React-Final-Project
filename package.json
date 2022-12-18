@@ -1,5 +1,6 @@
 {
   "name": "react-final-project",
+  "homepage": "https://ilyaeru.github.io/React-Final-Project/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -34,7 +35,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -61,6 +64,7 @@
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
     "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.11"
+    "eslint-plugin-react": "^7.31.11",
+    "gh-pages": "^4.0.0"
   }
 }
