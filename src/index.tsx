@@ -3,21 +3,28 @@ import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { store } from './app/store';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './theme/theme';
+import { GlobalStyle } from './styles/globalStyle';
+import '@fontsource/josefin-sans';
+import '@fontsource/josefin-sans/700.css';
+import '@fontsource/cormorant-upright';
+import '@fontsource/cormorant-upright/700.css';
+import '@fontsource/montserrat';
+import '@fontsource/montserrat/700.css';
+import '@fontsource/mukta-vaani';
 
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('root')!;
 const root = createRoot(container);
 
 root.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <App />
+      </ThemeProvider>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
