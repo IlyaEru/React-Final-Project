@@ -1,5 +1,7 @@
 # React Final Project
 
+## [Live Preview](https://ilyaeru.github.io/React-Final-Project/)
+
 In this project, I have created a web application for managing a store.
 The store manages data (with Redux and Firebase) about customers, products and purchases.
 
@@ -12,8 +14,6 @@ The application has the following functionality:
 - The user can see customer's purchases.
 - The user can see product's purchases.
 - The user can see a table of purchases and filter by product, customer and date.
-
-## [Live Preview](https://ilyaeru.github.io/React-Final-Project/)
 
 ### Built With
 
