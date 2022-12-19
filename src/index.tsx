@@ -13,6 +13,7 @@ import '@fontsource/cormorant-upright/700.css';
 import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/mukta-vaani';
+import '@fontsource/heebo';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('root')!;

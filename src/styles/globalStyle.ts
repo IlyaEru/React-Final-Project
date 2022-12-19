@@ -15,7 +15,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+font-family: 'heebo', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 :root{
@@ -32,7 +32,7 @@ h4 {
   margin-bottom: 0.75rem;
 }
 body{
-  background-color: #eee
+  background-color: #f6f6f6
 }
 ul {
   list-style-type: none;
@@ -54,15 +54,41 @@ export const StyledButton = styled.button<Props>`
   display: flex;
   flex: none;
   align-items: center;
+  font-weight: 500;
   justify-content: center;
-  color: ${({ color, theme }) => (color ? color : theme.colors.primaryBlue)};
-  background: ${({ bg, theme }) => (bg ? bg : theme.colors.primaryLightBlue)};
+  color: ${({ color, theme }) => (color ? color : theme.colors.white)};
+  background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage1)};
   border: none;
   outline: none;
   cursor: pointer;
   transition: all 0.3s linear;
   font-size: ${({ size }) => (size === 'small' ? '0.8rem' : '1rem')};
+  :hover,
+  :focus {
+    background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage2)};
+  }
+  :active {
+    background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage3)};
+  }
 `;
+
+export const StyledOutlineButton = styled(StyledButton)<Props>`
+  background: transparent;
+  border: 1px solid
+    ${({ color, theme }) => (color ? color : theme.colors.blueStage1)};
+  color: ${({ color, theme }) => (color ? color : theme.colors.blueStage1)};
+  :hover,
+  :focus {
+    background: ${({ color, theme }) =>
+      color ? color : theme.colors.blueStage2};
+    color: ${({ theme }) => theme.colors.white};
+  }
+  :active {
+    background: ${({ color, theme }) =>
+      color ? color : theme.colors.blueStage3};
+  }
+`;
+
 export const StyledCard = styled.div`
   display: flex;
   flex-direction: column;
@@ -107,12 +133,6 @@ export const StyledLink = styled(Link)`
       width: 100%;
     }
   }
-`;
-export const StyledOutlineButton = styled(StyledButton)<Props>`
-  background: transparent;
-  border: 1px solid
-    ${({ color, theme }) => (color ? color : theme.colors.primaryBlue)};
-  color: ${({ color, theme }) => (color ? color : theme.colors.primaryBlue)};
 `;
 
 export const StyledMainHeading = styled.h1`

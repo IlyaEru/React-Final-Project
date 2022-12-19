@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { StyledOutlineButton } from '../../styles/globalStyle';
+import { StyledButton, StyledOutlineButton } from '../../styles/globalStyle';
 
 export const StyledBuyProductForm = styled.form`
   background-color: white;
@@ -29,11 +29,8 @@ export const StyledBuyProductFormInputWrapper = styled.div`
   grid-template-columns: 1fr 2fr;
   gap: 1rem;
 `;
-export const StyledBuyProductFormButton = styled(StyledOutlineButton)`
+export const StyledBuyProductFormButton = styled(StyledButton)`
   width: 100%;
-  &:hover {
-    background-color: ${({ theme }) => theme.colors.lightGrey3};
-  }
 `;
 export const StyledBuyProductFormLabel = styled.label`
   flex: 1;

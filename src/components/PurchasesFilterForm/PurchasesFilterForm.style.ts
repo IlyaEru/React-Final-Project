@@ -47,14 +47,6 @@ export const StyledPurchasesFilterFormInputWrapper = styled.div`
 export const StyledPurchasesFilterFormButton = styled(StyledButton)`
   grid-column: 1 / -1;
   color: #fff;
-  background-color: #1890ff;
   width: 15rem;
   justify-self: center;
-
-  :hover {
-    background-color: #096dd9;
-  }
-  :active {
-    background-color: #0050b3;
-  }
 `;

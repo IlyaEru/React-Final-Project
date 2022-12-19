@@ -1,5 +1,9 @@
 import styled from 'styled-components';
-import { StyledButton, StyledTable } from '../../styles/globalStyle';
+import {
+  StyledButton,
+  StyledOutlineButton,
+  StyledTable,
+} from '../../styles/globalStyle';
 
 export const StyledProductPurchasesContainer = styled.section`
   width: 100%;
@@ -38,13 +42,16 @@ export const StyledProductPurchasesTable = styled(StyledTable)`
   margin-bottom: 1rem;
 `;
 
-export const StyledProductPurchasesButton = styled(StyledButton)`
+export const StyledProductPurchasesNewButton = styled(StyledButton)`
   margin-top: 1rem;
   min-width: 11rem;
   min-height: 2.5rem;
   font-size: 1.1rem;
-  :hover {
-    background-color: ${({ theme }) => theme.colors.primaryDarkBlue};
-    color: white;
-  }
+`;
+
+export const StyledProductPurchasesCancelButton = styled(StyledOutlineButton)`
+  margin-top: 1rem;
+  min-width: 11rem;
+  min-height: 2.5rem;
+  font-size: 1.1rem;
 `;

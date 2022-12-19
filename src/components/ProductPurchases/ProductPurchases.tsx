@@ -8,9 +8,10 @@ import { StyledLink } from '../../styles/globalStyle';
 import BuyProductForm from '../BuyProductForm/BuyProductForm';
 
 import {
-  StyledProductPurchasesButton,
+  StyledProductPurchasesCancelButton,
   StyledProductPurchasesContainer,
   StyledProductPurchasesHeader,
+  StyledProductPurchasesNewButton,
   StyledProductPurchasesTable,
 } from './ProductPurchases.style';
 
@@ -83,11 +84,20 @@ export default function ProductPurchases({ productID }: { productID: string }) {
           </StyledProductPurchasesTable>
         </>
       )}
-      <StyledProductPurchasesButton
-        onClick={() => setIsAddNewProductPurchase(!isAddNewProductPurchase)}
-      >
-        {isAddNewProductPurchase ? 'Cancel' : 'Add new purchase'}
-      </StyledProductPurchasesButton>
+      {isAddNewProductPurchase ? (
+        <StyledProductPurchasesCancelButton
+          onClick={() => setIsAddNewProductPurchase(!isAddNewProductPurchase)}
+        >
+          Cancel
+        </StyledProductPurchasesCancelButton>
+      ) : (
+        <StyledProductPurchasesNewButton
+          onClick={() => setIsAddNewProductPurchase(!isAddNewProductPurchase)}
+        >
+          Add new purchase
+        </StyledProductPurchasesNewButton>
+      )}
+
       {isAddNewProductPurchase && (
         <BuyProductForm providedProduct={productID} />
       )}

@@ -20,8 +20,12 @@ export const StyledCustomersTable = styled(StyledTable)`
     .table-header__content-wrapper {
       display: flex;
       justify-content: center;
+      align-items: center;
     }
     th button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: transparent;
       border: none;
       color: white;
@@ -29,12 +33,11 @@ export const StyledCustomersTable = styled(StyledTable)`
       cursor: pointer;
       margin-left: 0.2rem;
       opacity: 0.5;
+      transition: opacity 0.2s ease-in-out;
+
       :hover,
       &.active {
         opacity: 1;
-        svg {
-          transform: scale(1.2);
-        }
       }
     }
   }
@@ -54,9 +57,16 @@ export const StyledCustomersTable = styled(StyledTable)`
     tbody td:nth-child(3n) {
       font-size: 0.8rem;
     }
+
+    thead th button {
+      font-size: 1rem;
+    }
   }
   @media (max-width: 400px) {
     font-size: 0.7rem;
+    thead th button {
+      font-size: 0.8rem;
+    }
     tbody td:nth-child(3n) {
       font-size: 0.6rem;
     }

@@ -5,6 +5,7 @@
   "private": true,
   "dependencies": {
     "@fontsource/cormorant-upright": "^4.5.10",
+    "@fontsource/heebo": "^4.5.14",
     "@fontsource/josefin-sans": "^4.5.11",
     "@fontsource/montserrat": "^4.5.13",
     "@fontsource/mukta-vaani": "^4.5.11",
