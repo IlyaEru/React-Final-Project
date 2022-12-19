@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/React-Final-Project/static/css/main.2ca3d22d.css",
-    "main.js": "/React-Final-Project/static/js/main.f542fe1c.js",
+    "main.css": "/React-Final-Project/static/css/main.8231398f.css",
+    "main.js": "/React-Final-Project/static/js/main.14416a7e.js",
     "static/media/mukta-vaani-all-400-normal.woff": "/React-Final-Project/static/media/mukta-vaani-all-400-normal.9f7a209a18a7badff92b.woff",
     "static/media/mukta-vaani-gujarati-400-normal.woff2": "/React-Final-Project/static/media/mukta-vaani-gujarati-400-normal.441308e554fecb9fd9f4.woff2",
     "static/media/cormorant-upright-all-400-normal.woff": "/React-Final-Project/static/media/cormorant-upright-all-400-normal.0a03761bf00bb604a0fe.woff",
@@ -15,6 +15,7 @@
     "static/media/cormorant-upright-latin-ext-700-normal.woff2": "/React-Final-Project/static/media/cormorant-upright-latin-ext-700-normal.c74aed23c375e707666c.woff2",
     "static/media/cormorant-upright-latin-ext-400-normal.woff2": "/React-Final-Project/static/media/cormorant-upright-latin-ext-400-normal.50d3c1f3e7506f5a08d2.woff2",
     "static/media/mukta-vaani-latin-400-normal.woff2": "/React-Final-Project/static/media/mukta-vaani-latin-400-normal.3960a3a6577f785699db.woff2",
+    "static/media/heebo-all-400-normal.woff": "/React-Final-Project/static/media/heebo-all-400-normal.aa917875affd38530b8f.woff",
     "static/media/mukta-vaani-latin-ext-400-normal.woff2": "/React-Final-Project/static/media/mukta-vaani-latin-ext-400-normal.0b93eadc3580df383311.woff2",
     "static/media/montserrat-latin-700-normal.woff2": "/React-Final-Project/static/media/montserrat-latin-700-normal.56c09b9a46af6a54eeb3.woff2",
     "static/media/montserrat-latin-400-normal.woff2": "/React-Final-Project/static/media/montserrat-latin-400-normal.acb6629fe45c43ad5d8b.woff2",
@@ -22,6 +23,7 @@
     "static/media/montserrat-latin-ext-700-normal.woff2": "/React-Final-Project/static/media/montserrat-latin-ext-700-normal.ed2b8a3421aea40bea12.woff2",
     "static/media/josefin-sans-latin-700-normal.woff2": "/React-Final-Project/static/media/josefin-sans-latin-700-normal.3409fb5083a54c9defc0.woff2",
     "static/media/montserrat-latin-ext-400-normal.woff2": "/React-Final-Project/static/media/montserrat-latin-ext-400-normal.0204ec08a4b574088f02.woff2",
+    "static/media/heebo-latin-400-normal.woff2": "/React-Final-Project/static/media/heebo-latin-400-normal.bb0a61a5b413f06b64ac.woff2",
     "static/media/montserrat-cyrillic-ext-700-normal.woff2": "/React-Final-Project/static/media/montserrat-cyrillic-ext-700-normal.a113ef18975312602ee1.woff2",
     "static/media/montserrat-cyrillic-ext-400-normal.woff2": "/React-Final-Project/static/media/montserrat-cyrillic-ext-400-normal.bbf9e820a2563aac0d8b.woff2",
     "static/media/cormorant-upright-vietnamese-700-normal.woff2": "/React-Final-Project/static/media/cormorant-upright-vietnamese-700-normal.04fd0e73f01814b95775.woff2",
@@ -30,16 +32,17 @@
     "static/media/montserrat-cyrillic-400-normal.woff2": "/React-Final-Project/static/media/montserrat-cyrillic-400-normal.e5c5c19c23e370a342c8.woff2",
     "static/media/josefin-sans-latin-ext-400-normal.woff2": "/React-Final-Project/static/media/josefin-sans-latin-ext-400-normal.9a2c45e18269982d8d82.woff2",
     "static/media/josefin-sans-latin-ext-700-normal.woff2": "/React-Final-Project/static/media/josefin-sans-latin-ext-700-normal.db43dfca8456d28dcac5.woff2",
+    "static/media/heebo-hebrew-400-normal.woff2": "/React-Final-Project/static/media/heebo-hebrew-400-normal.9f939e5a5a34cd742913.woff2",
     "static/media/montserrat-vietnamese-700-normal.woff2": "/React-Final-Project/static/media/montserrat-vietnamese-700-normal.810d24ff481f2abee5c1.woff2",
     "static/media/montserrat-vietnamese-400-normal.woff2": "/React-Final-Project/static/media/montserrat-vietnamese-400-normal.8f3f4c99eb0eeb5990f1.woff2",
     "static/media/josefin-sans-vietnamese-700-normal.woff2": "/React-Final-Project/static/media/josefin-sans-vietnamese-700-normal.afd31155b9be85b6f20c.woff2",
     "static/media/josefin-sans-vietnamese-400-normal.woff2": "/React-Final-Project/static/media/josefin-sans-vietnamese-400-normal.8d631991aaf999843621.woff2",
     "index.html": "/React-Final-Project/index.html",
-    "main.2ca3d22d.css.map": "/React-Final-Project/static/css/main.2ca3d22d.css.map",
-    "main.f542fe1c.js.map": "/React-Final-Project/static/js/main.f542fe1c.js.map"
+    "main.8231398f.css.map": "/React-Final-Project/static/css/main.8231398f.css.map",
+    "main.14416a7e.js.map": "/React-Final-Project/static/js/main.14416a7e.js.map"
   },
   "entrypoints": [
-    "static/css/main.2ca3d22d.css",
-    "static/js/main.f542fe1c.js"
+    "static/css/main.8231398f.css",
+    "static/js/main.14416a7e.js"
   ]
 }
