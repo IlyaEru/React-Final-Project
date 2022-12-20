@@ -8,7 +8,6 @@ export const StyledProductsContainer = styled(StyledContainer).attrs({
   flex-direction: column;
   align-items: center;
   padding-top: 1rem;
-  background-color: #eee;
 `;
 export const StyledProductsPurchaseHeader = styled.h2`
   color: ${({ theme }) => theme.colors.primaryDarkBlue};

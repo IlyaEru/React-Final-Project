@@ -66,6 +66,7 @@ export const EditFormFieldButton = styled.button`
   cursor: pointer;
   font-size: 1.4rem;
   display: flex;
+  align-items: center;
   margin-left: 0.4rem;
   &.edit-form__edit-button {
     color: ${({ theme }) => theme.colors.blueStage1};
