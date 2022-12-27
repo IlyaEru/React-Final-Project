@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAppDispatch, useCustomers, useProducts } from '../../app/hooks';
 import {
   removeCustomer,
@@ -28,6 +29,7 @@ export interface EditFormProps {
 
 export default function EditForm({ editedId, editedType }: EditFormProps) {
   const dispatch = useAppDispatch();
+  const navigate = useNavigate();
   const [products, isLoadingProducts] = useProducts();
   const [customers, isLoadingCustomers] = useCustomers();
   const [isDeleteConfirmationModalShown, setIsDeleteConfirmationModalShown] =
@@ -107,13 +109,6 @@ export default function EditForm({ editedId, editedType }: EditFormProps) {
         },
       }));
     },
-    handleItemDelete: () => {
-      if (editedType === 'product') {
-        dispatch(removeProduct(editedId));
-      } else {
-        dispatch(removeCustomer(editedId));
-      }
-    },
   };
 
   const handleEditFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -126,6 +121,7 @@ export default function EditForm({ editedId, editedType }: EditFormProps) {
     } else {
       dispatch(removeCustomer(editedId));
     }
+    navigate('/');
   };
 
   const handleItemDeleteReject = () => {

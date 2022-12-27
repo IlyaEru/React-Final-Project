@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useAppDispatch, useCustomers, useProducts } from '../../app/hooks';
 import { createPurchase } from '../../features/purchases/purchasesSlice';
+import { addToast } from '../../features/toasts/toastsSlice';
 import {
   StyledButProductFormTotalPrice,
   StyledBuyProductForm,
@@ -99,10 +100,24 @@ export default function BuyProductForm({
           quantity: selectedFormValues.quantity,
         }),
       );
+      dispatch(
+        addToast({
+          message: 'Purchase created successfully',
+          type: 'success',
+        }),
+      );
+
       setSelectedFormValues((prev) => ({
         ...prev,
         quantity: 1,
       }));
+    } else {
+      dispatch(
+        addToast({
+          message: 'Please fill all fields',
+          type: 'error',
+        }),
+      );
     }
   };
 

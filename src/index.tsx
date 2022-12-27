@@ -14,6 +14,7 @@ import '@fontsource/montserrat';
 import '@fontsource/montserrat/700.css';
 import '@fontsource/mukta-vaani';
 import '@fontsource/heebo';
+import Toast from './components/Toast/Toast';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const container = document.getElementById('root')!;
@@ -24,6 +25,7 @@ root.render(
     <Provider store={store}>
       <ThemeProvider theme={theme}>
         <GlobalStyle />
+        <Toast />
         <App />
       </ThemeProvider>
     </Provider>

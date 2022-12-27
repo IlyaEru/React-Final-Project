@@ -7,6 +7,7 @@ import {
   updateProduct,
 } from '../../helpers/firebase';
 import { Product } from '../../types';
+import { addToast } from '../toasts/toastsSlice';
 
 interface ProductsState {
   products: Product[] | [];
@@ -48,16 +49,18 @@ export const fetchProducts = createAsyncThunk(
 
 export const setProduct = createAsyncThunk(
   'products/updateProduct',
-  async (product: Product) => {
+  async (product: Product, { dispatch }) => {
     updateProduct(product.id, product.name, product.price, product.quantity);
+    dispatch(addToast({ message: 'Product updated', type: 'success' }));
   },
 );
 
 export const removeProduct = createAsyncThunk(
   'products/removeProduct',
-  async (id: string) => {
+  async (id: string, { dispatch }) => {
     deleteProduct(id);
     deleteAllPurchasesOfProduct(id);
+    dispatch(addToast({ message: 'Product deleted', type: 'success' }));
   },
 );
 

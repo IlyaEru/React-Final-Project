@@ -7,6 +7,7 @@ import {
   updateCustomer,
 } from '../../helpers/firebase';
 import { Customer } from '../../types';
+import { addToast } from '../toasts/toastsSlice';
 
 interface CustomersState {
   customers: Customer[] | [];
@@ -48,21 +49,23 @@ export const fetchCustomers = createAsyncThunk(
 
 export const setCustomer = createAsyncThunk(
   'customers/updateCustomer',
-  async (customer: Customer) => {
+  async (customer: Customer, { dispatch }) => {
     updateCustomer(
       customer.id,
       customer.firstName,
       customer.lastName,
       customer.city,
     );
+    dispatch(addToast({ message: 'Customer updated', type: 'success' }));
   },
 );
 
 export const removeCustomer = createAsyncThunk(
   'customers/removeCustomer',
-  async (id: string) => {
+  async (id: string, { dispatch }) => {
     deleteCustomer(id);
     deleteAllPurchasesOfCustomer(id);
+    dispatch(addToast({ message: 'Customer deleted', type: 'success' }));
   },
 );
 
