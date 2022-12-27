@@ -41,6 +41,8 @@ export const StyledPurchasesFilterFormInputWrapper = styled.div`
   @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
     select {
       font-size: 0.8rem;
+      display: inline-block;
+      width: 100%;
     }
   }
 `;

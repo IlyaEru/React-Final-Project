@@ -40,14 +40,6 @@ export const getCollection = async (
     ...doc.data(),
   }));
 
-  // if (collectionName === 'purchases') {
-  //   data = data.map((item) => {
-  //     return {
-  //       ...item,
-  //       date: typeof item.date === 'string' ? JSON.parse(item.date) : item.date,
-  //     };
-  //   });
-  // }
   return data;
 };
 export const getProduct = async (id: string) => {

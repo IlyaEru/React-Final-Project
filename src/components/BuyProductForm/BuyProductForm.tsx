@@ -64,14 +64,29 @@ export default function BuyProductForm({
       | React.ChangeEvent<HTMLSelectElement>,
   ) => {
     const { name, value } = e.target;
-    setSelectedFormValues((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
+    if (name === 'quantity') {
+      if (Number(value) > 0) {
+        setSelectedFormValues((prev) => ({
+          ...prev,
+          [name]: Number(value),
+        }));
+      } else {
+        setSelectedFormValues((prev) => ({
+          ...prev,
+          [name]: '',
+        }));
+      }
+    } else {
+      setSelectedFormValues((prev) => ({
+        ...prev,
+        [name]: value,
+      }));
+    }
   };
 
   const handleBuyProductFormSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (
       selectedFormValues.product &&
       selectedFormValues.customer &&
