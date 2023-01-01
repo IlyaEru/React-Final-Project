@@ -11,11 +11,11 @@ import {
 
 export default function ProductCard({ product }: { product: Product }) {
   const { id, name, price, quantity } = product;
-  const [cardHeight, setCardHeight] = useState(0);
+  const [cardHeight, setCardHeight] = useState(800);
   const cardHeightRef = useRef<HTMLDivElement>(null);
   const cardId = useId();
 
-  const resizeObserver = new ResizeObserver((entries) => {
+  const resizeObserver = new ResizeObserver(() => {
     const cardHeight = cardHeightRef.current?.offsetHeight;
     if (cardHeight) {
       setCardHeight(cardHeight);
@@ -32,7 +32,6 @@ export default function ProductCard({ product }: { product: Product }) {
       }
     };
   }, []);
-  console.log(cardHeight);
 
   return (
     <StyledProductCardContainer

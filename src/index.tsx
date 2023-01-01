@@ -6,14 +6,6 @@ import App from './App';
 import { ThemeProvider } from 'styled-components';
 import { theme } from './theme/theme';
 import { GlobalStyle } from './styles/globalStyle';
-import '@fontsource/josefin-sans';
-import '@fontsource/josefin-sans/700.css';
-import '@fontsource/cormorant-upright';
-import '@fontsource/cormorant-upright/700.css';
-import '@fontsource/montserrat';
-import '@fontsource/montserrat/700.css';
-import '@fontsource/mukta-vaani';
-import '@fontsource/heebo';
 import Toast from './components/Toast/Toast';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
