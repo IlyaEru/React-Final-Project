@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/React-Final-Project/static/css/main.8231398f.css",
-    "main.js": "/React-Final-Project/static/js/main.99f352ee.js",
+    "main.js": "/React-Final-Project/static/js/main.a700e6cd.js",
     "static/media/mukta-vaani-all-400-normal.woff": "/React-Final-Project/static/media/mukta-vaani-all-400-normal.9f7a209a18a7badff92b.woff",
     "static/media/mukta-vaani-gujarati-400-normal.woff2": "/React-Final-Project/static/media/mukta-vaani-gujarati-400-normal.441308e554fecb9fd9f4.woff2",
     "static/media/cormorant-upright-all-400-normal.woff": "/React-Final-Project/static/media/cormorant-upright-all-400-normal.0a03761bf00bb604a0fe.woff",
@@ -39,10 +39,10 @@
     "static/media/josefin-sans-vietnamese-400-normal.woff2": "/React-Final-Project/static/media/josefin-sans-vietnamese-400-normal.8d631991aaf999843621.woff2",
     "index.html": "/React-Final-Project/index.html",
     "main.8231398f.css.map": "/React-Final-Project/static/css/main.8231398f.css.map",
-    "main.99f352ee.js.map": "/React-Final-Project/static/js/main.99f352ee.js.map"
+    "main.a700e6cd.js.map": "/React-Final-Project/static/js/main.a700e6cd.js.map"
   },
   "entrypoints": [
     "static/css/main.8231398f.css",
-    "static/js/main.99f352ee.js"
+    "static/js/main.a700e6cd.js"
   ]
 }
