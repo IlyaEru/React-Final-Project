@@ -1,11 +1,18 @@
 import styled from 'styled-components';
 import { StyledCard } from '../../styles/globalStyle';
 
-export const StyledProductCardContainer = styled(StyledCard)`
+export const StyledProductCardContainer = styled(StyledCard)<{
+  $height: number;
+  $id: string;
+}>`
   align-self: flex-start;
   max-width: 600px;
   width: 100%;
   white-space: nowrap;
+  margin: 1.5rem 0;
+  &[id='${({ $id }) => $id}'] {
+    grid-row-end: span ${({ $height }) => Math.round($height / 10) + 4};
+  }
   > h3,
   p {
     letter-spacing: ${({ theme }) => theme.letterSpacing};

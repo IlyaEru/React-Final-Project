@@ -6,7 +6,6 @@ export const StyledEditFormContainer = styled(StyledCard)`
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   padding: 2rem 3rem;
-  max-width: 600px;
   justify-items: start;
   margin-top: 2rem;
 
@@ -16,14 +15,16 @@ export const StyledEditFormContainer = styled(StyledCard)`
 `;
 
 export const EditFormLabel = styled.label`
+  display: flex;
+  align-items: center;
   white-space: nowrap;
   text-transform: capitalize;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 300;
   margin-right: 0.4rem;
-
+  color: ${({ theme }) => theme.colors.primaryDarkBlue};
   @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 

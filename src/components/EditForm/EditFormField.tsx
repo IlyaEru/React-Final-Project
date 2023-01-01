@@ -31,9 +31,9 @@ export default function EditFormField({
 }: EditFormFieldProps) {
   const getFormattedLabel = () => {
     if (field === 'firstName' || field === 'lastName') {
-      return `${field.split('Name')[0]} Name`;
+      return `${field.split('Name')[0]} Name:`;
     }
-    return field;
+    return `${field}:`;
   };
 
   return (

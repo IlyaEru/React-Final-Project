@@ -95,6 +95,9 @@ export default function EditForm({ editedId, editedType }: EditFormProps) {
       if (!editedItem[field].value) {
         return;
       }
+      if (field === 'price') {
+        editedItem[field].value = Number(editedItem[field].value).toFixed(2);
+      }
       const updatedItem = { ...item, [field]: editedItem[field].value };
       if (editedType === 'product') {
         dispatch(setProduct(updatedItem as Product));

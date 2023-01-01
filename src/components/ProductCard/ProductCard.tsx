@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useId, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Product } from '../../types';
 import ProductPurchases from '../ProductPurchases/ProductPurchases';
@@ -11,8 +11,37 @@ import {
 
 export default function ProductCard({ product }: { product: Product }) {
   const { id, name, price, quantity } = product;
+  const [cardHeight, setCardHeight] = useState(0);
+  const cardHeightRef = useRef<HTMLDivElement>(null);
+  const cardId = useId();
+
+  const resizeObserver = new ResizeObserver((entries) => {
+    const cardHeight = cardHeightRef.current?.offsetHeight;
+    if (cardHeight) {
+      setCardHeight(cardHeight);
+    }
+  });
+
+  useEffect(() => {
+    if (cardHeightRef.current) {
+      resizeObserver.observe(cardHeightRef.current);
+    }
+    return () => {
+      if (cardHeightRef.current) {
+        resizeObserver.unobserve(cardHeightRef.current);
+      }
+    };
+  }, []);
+  console.log(cardHeight);
+
   return (
-    <StyledProductCardContainer>
+    <StyledProductCardContainer
+      className={cardId}
+      $height={cardHeight}
+      $id={cardId}
+      ref={cardHeightRef}
+      id={cardId}
+    >
       <StyledProductName>
         <Link to={`/products/${id}`}>{name}</Link>
       </StyledProductName>
