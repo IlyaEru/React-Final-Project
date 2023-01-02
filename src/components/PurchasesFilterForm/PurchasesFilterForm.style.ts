@@ -23,12 +23,12 @@ export const StyledPurchasesFilterFormInputWrapper = styled.div`
     margin-bottom: 0.5rem;
     text-transform: capitalize;
   }
+
   select {
     height: 1.8rem;
     border: 1px solid #d9d9d9;
     border-radius: 5px;
     padding: 0 0.5rem;
-    background: transparent;
     font-size: 1rem;
     outline: none;
     transition: border 0.2s;

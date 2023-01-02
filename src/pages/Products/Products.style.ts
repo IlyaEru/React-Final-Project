@@ -10,7 +10,7 @@ export const StyledProductsContainer = styled(StyledContainer).attrs({
   padding-top: 1rem;
 `;
 export const StyledProductsPurchaseHeader = styled.h2`
-  color: ${({ theme }) => theme.colors.primaryDarkBlue};
+  color: ${({ theme }) => theme.colors.secondaryHeader};
   margin: 0 0 10px 0;
   font-family: 'Cormorant Upright', serif;
   font-weight: 700;

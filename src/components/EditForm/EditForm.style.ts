@@ -138,7 +138,8 @@ export const EditFormInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   appearance: none;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.inputBackground};
+  color: ${({ theme }) => theme.colors.text};
   background-position: right 10px top 50%, 0 0;
   background-size: 20px auto, 100%;
   background-repeat: no-repeat;

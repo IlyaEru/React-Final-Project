@@ -1,5 +1,5 @@
 import { collection, onSnapshot } from 'firebase/firestore';
-import { useEffect } from 'react';
+import { createContext, useEffect, useState } from 'react';
 import { useAppDispatch, useCustomers, useProducts } from './app/hooks';
 import { fetchCustomers } from './features/customers/customersSlice';
 import { fetchProducts } from './features/products/productsSlice';
@@ -7,8 +7,21 @@ import { fetchPurchases } from './features/purchases/purchasesSlice';
 import { db } from './helpers/firebase';
 import { seedProducts, seedCustomers } from './helpers/seedFirebase';
 import RoutesSwitch from './RoutesSwitch';
+import { ThemeProvider } from 'styled-components';
+import lightTheme from './theme/lightTheme';
+import darkTheme from './theme/darkTheme';
+import { GlobalStyle } from './styles/globalStyle';
+
+interface ThemeContext {
+  theme: string;
+  setTheme: React.Dispatch<React.SetStateAction<string>>;
+}
+
+export const themeContext = createContext({} as ThemeContext);
 
 function App() {
+  const [theme, setTheme] = useState('light');
+
   const dispatch = useAppDispatch();
 
   const [products, isLoadingProducts] = useProducts();
@@ -41,9 +54,27 @@ function App() {
       unsubscribePurchases();
     };
   }, []);
+
+  const localTheme = localStorage.getItem('theme');
+
+  useEffect(() => {
+    if (localTheme) {
+      setTheme(localTheme);
+    }
+  }, [localTheme, setTheme]);
   return (
     <>
-      <RoutesSwitch />
+      <themeContext.Provider
+        value={{
+          theme,
+          setTheme,
+        }}
+      >
+        <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
+          <GlobalStyle />
+          <RoutesSwitch />
+        </ThemeProvider>
+      </themeContext.Provider>
     </>
   );
 }

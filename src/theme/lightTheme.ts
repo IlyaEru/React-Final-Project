@@ -1,5 +1,28 @@
-export const theme = {
+export type Theme = typeof lightTheme;
+
+const lightTheme = {
   colors: {
+    background: '#f6f6f6',
+    text: '#000',
+
+    menuBackground: '#ccc',
+    menuText: '#333',
+
+    linkHover: '#49a6e9',
+
+    secondaryHeader: '#063251',
+
+    buttonStage1: '#1890ff',
+    buttonStage2: '#096dd9',
+    buttonStage3: '#0050b3',
+
+    cardBackground: '#fff',
+
+    tableBackground: '#fff',
+    tableSecondaryBackground: '#f1f5f8',
+
+    inputBackground: '#fff',
+
     primaryDarkBlue: '#063251',
     primaryBlue: '#49a6e9',
     primaryBlue2: '#2caeba',
@@ -68,3 +91,5 @@ export const theme = {
   largeMaxWidth: '1200px',
   letterSpacing: '0.1rem',
 };
+
+export default lightTheme;

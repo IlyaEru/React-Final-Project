@@ -31,14 +31,7 @@ export const StyledProductPurchasesTable = styled(StyledTable)`
   th {
     text-align: center;
   }
-  tbody {
-    tr {
-      background-color: ${({ theme }) => theme.colors.white};
-    }
-    tr:hover {
-      background-color: ${({ theme }) => theme.colors.lightGrey};
-    }
-  }
+
   margin-bottom: 1rem;
 `;
 

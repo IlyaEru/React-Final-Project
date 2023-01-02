@@ -32,7 +32,7 @@ h4 {
   margin-bottom: 0.75rem;
 }
 body{
-  background-color: #f6f6f6
+  background-color: ${({ theme }) => theme.colors.background};
 }
 ul {
   list-style-type: none;
@@ -57,7 +57,7 @@ export const StyledButton = styled.button<Props>`
   font-weight: 500;
   justify-content: center;
   color: ${({ color, theme }) => (color ? color : theme.colors.white)};
-  background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage1)};
+  background: ${({ bg, theme }) => (bg ? bg : theme.colors.buttonStage1)};
   border: none;
   outline: none;
   cursor: pointer;
@@ -65,27 +65,29 @@ export const StyledButton = styled.button<Props>`
   font-size: ${({ size }) => (size === 'small' ? '0.8rem' : '1rem')};
   :hover,
   :focus {
-    background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage2)};
+    background: ${({ bg, theme }) => (bg ? bg : theme.colors.buttonStage2)};
   }
   :active {
-    background: ${({ bg, theme }) => (bg ? bg : theme.colors.blueStage3)};
+    background: ${({ bg, theme }) => (bg ? bg : theme.colors.buttonStage3)};
   }
 `;
 
 export const StyledOutlineButton = styled(StyledButton)<Props>`
   background: transparent;
-  border: 1px solid
-    ${({ color, theme }) => (color ? color : theme.colors.blueStage1)};
-  color: ${({ color, theme }) => (color ? color : theme.colors.blueStage1)};
+  border: 1.5px solid
+    ${({ color, theme }) => (color ? color : theme.colors.buttonStage1)};
+  color: ${({ color, theme }) =>
+    color ? color : theme.colors.secondaryHeader};
   :hover,
   :focus {
     background: ${({ color, theme }) =>
-      color ? color : theme.colors.blueStage2};
+      color ? color : theme.colors.buttonStage2};
     color: ${({ theme }) => theme.colors.white};
+    border-color: ${({ theme }) => theme.colors.buttonStage2};
   }
   :active {
     background: ${({ color, theme }) =>
-      color ? color : theme.colors.blueStage3};
+      color ? color : theme.colors.buttonStage3};
   }
 `;
 
@@ -95,7 +97,7 @@ export const StyledCard = styled.div`
   align-items: center;
   margin: 1rem;
   padding: 1rem;
-  background-color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.cardBackground};
   box-shadow: ${({ theme }) => theme.lightShadow};
   border-radius: 0.4rem;
 `;
@@ -107,6 +109,15 @@ export const StyledTable = styled.table`
     padding: 0.4rem;
     text-align: left;
     border: 1px solid #ddd;
+  }
+  tbody {
+    color: ${({ theme }) => theme.colors.text};
+    tr {
+      background-color: ${({ theme }) => theme.colors.tableBackground};
+    }
+    tr:nth-child(even) {
+      background-color: ${({ theme }) => theme.colors.tableSecondaryBackground};
+    }
   }
 `;
 
@@ -137,8 +148,7 @@ export const StyledLink = styled(Link)`
 
 export const StyledMainHeading = styled.h1`
   font-size: clamp(2rem, 8vw, 3rem);
-  color: ${({ color, theme }) =>
-    color ? color : theme.colors.primaryDarkGrey};
+  color: ${({ color, theme }) => (color ? color : theme.colors.primaryBlue)};
   margin-bottom: 2rem;
   width: 100%;
   text-align: center;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import { StyledButton, StyledOutlineButton } from '../../styles/globalStyle';
+import { StyledButton } from '../../styles/globalStyle';
 
 export const StyledBuyProductForm = styled.form`
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.background};
   padding: 2rem 3rem;
   border-radius: 5px;
   display: flex;
@@ -50,7 +50,8 @@ export const StyledBuyProductFormInput = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   appearance: none;
-  background-color: white;
+  background-color: ${({ theme }) => theme.colors.inputBackground};
+  color: ${({ theme }) => theme.colors.text};
   background-position: right 10px top 50%, 0 0;
   background-size: 20px auto, 100%;
   background-repeat: no-repeat;

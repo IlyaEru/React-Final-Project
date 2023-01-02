@@ -6,6 +6,7 @@ export const StyledProductCardContainer = styled(StyledCard)<{
   $id: string;
 }>`
   align-self: flex-start;
+  color: ${({ theme }) => theme.colors.text};
   max-width: 600px;
   width: 100%;
   white-space: nowrap;

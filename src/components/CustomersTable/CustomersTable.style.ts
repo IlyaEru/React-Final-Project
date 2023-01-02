@@ -45,13 +45,7 @@ export const StyledCustomersTable = styled(StyledTable)`
   th {
     text-align: center;
   }
-  tbody {
-    background-color: ${({ theme }) => theme.colors.white};
 
-    tr:hover {
-      background-color: ${({ theme }) => theme.colors.lightGrey};
-    }
-  }
   @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
     font-size: 0.9rem;
     tbody td:nth-child(3n) {
