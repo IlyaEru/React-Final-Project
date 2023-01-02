@@ -18,6 +18,8 @@ const lightTheme = {
 
     cardBackground: '#fff',
 
+    formBackground: '#fff',
+
     tableBackground: '#fff',
     tableSecondaryBackground: '#f1f5f8',
 

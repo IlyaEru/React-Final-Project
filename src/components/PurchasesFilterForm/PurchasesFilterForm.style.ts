@@ -22,6 +22,7 @@ export const StyledPurchasesFilterFormInputWrapper = styled.div`
     font-weight: 600;
     margin-bottom: 0.5rem;
     text-transform: capitalize;
+    color: ${({ theme }) => theme.colors.text};
   }
 
   select {

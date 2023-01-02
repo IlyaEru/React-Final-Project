@@ -35,6 +35,7 @@ export const StyledCustomersBuyProductButton = styled(StyledButton)`
   min-width: 11rem;
   min-height: 2.5rem;
   font-size: 1.1rem;
+  margin-bottom: 2rem;
   :hover {
     background-color: ${({ theme }) => theme.colors.primaryDarkBlue};
     color: white;

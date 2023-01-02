@@ -2,9 +2,10 @@ import styled from 'styled-components';
 import { StyledButton } from '../../styles/globalStyle';
 
 export const StyledBuyProductForm = styled.form`
-  background-color: ${({ theme }) => theme.colors.background};
+  background-color: ${({ theme }) => theme.colors.formBackground};
   padding: 2rem 3rem;
   border-radius: 5px;
+  color: ${({ theme }) => theme.colors.text};
   display: flex;
   flex-direction: column;
   align-items: flex-start;

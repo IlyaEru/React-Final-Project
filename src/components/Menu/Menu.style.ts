@@ -8,6 +8,9 @@ export const StyledMenuContainer = styled.header`
   padding: 20px;
   background: ${({ theme }) => theme.colors.menuBackground};
   box-shadow: ${({ theme }) => theme.lightShadow};
+  @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+    padding: 10px;
+  }
 `;
 
 export const StyledMenuList = styled.ul`
@@ -51,7 +54,7 @@ export const StyledMenuListItem = styled.li`
   }
   @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
     a {
-      font-size: 1rem;
+      font-size: 0.8rem;
     }
   }
 `;
@@ -70,6 +73,10 @@ export const StyledThemeToggleContainer = styled.div`
       inset 0px -5px 15px rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: 0.3s;
+    @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+      width: 3rem;
+      height: 1.5rem;
+    }
   }
   label:after {
     content: '';
@@ -83,6 +90,10 @@ export const StyledThemeToggleContainer = styled.div`
     transition: 0.3s;
     transform: translateX(0);
     left: 0;
+    @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
   input {
     width: 0;
@@ -100,6 +111,9 @@ export const StyledThemeToggleContainer = styled.div`
   label:active:after,
   label:hover:after {
     width: 2.5rem;
+    @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+      width: 1.5rem;
+    }
   }
 
   label svg {
@@ -107,6 +121,9 @@ export const StyledThemeToggleContainer = styled.div`
     margin: 0 0.5rem;
     position: absolute;
     z-index: 100;
+    @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
+      margin: 0 0.2rem;
+    }
   }
   label svg.sun {
     left: 0px;

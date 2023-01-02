@@ -45,15 +45,20 @@ export const StyledCustomersTable = styled(StyledTable)`
   th {
     text-align: center;
   }
-
+  tbody td:nth-child(3n) {
+    text-align: left;
+    white-space: normal;
+    ul li {
+      margin-bottom: 0.4rem;
+    }
+  }
   @media (max-width: ${({ theme }) => theme.breakpoints.xSmall}) {
-    font-size: 0.9rem;
-    tbody td:nth-child(3n) {
+    font-size: 0.7rem;
+    thead th button {
       font-size: 0.8rem;
     }
-
-    thead th button {
-      font-size: 1rem;
+    tbody td:nth-child(3n) {
+      font-size: 0.6rem;
     }
   }
   @media (max-width: 400px) {

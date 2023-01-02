@@ -12,6 +12,8 @@ const darkTheme = {
 
     cardBackground: '#7c7c7c',
 
+    formBackground: '#6f6f6f',
+
     tableBackground: '#374151',
     tableSecondaryBackground: '#1f2937',
 

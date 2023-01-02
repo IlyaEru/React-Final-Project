@@ -115,7 +115,7 @@ export const StyledTable = styled.table`
     tr {
       background-color: ${({ theme }) => theme.colors.tableBackground};
     }
-    tr:nth-child(even) {
+    tr:hover {
       background-color: ${({ theme }) => theme.colors.tableSecondaryBackground};
     }
   }
